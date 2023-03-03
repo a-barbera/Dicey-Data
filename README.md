@@ -2,9 +2,11 @@
 This is the group repository for project 4, a machine learning project using a Kaggle dataset with shopping data from Hunter's E-Grocery.
 
 # Project Overview:
-To find a potential business problem worth analyzing and use machine learning to provide further insights.  Our team chose a large dataset from Kaggle.com to ensure any machine learning application will have ample data to model.
+Our goal was to find a potential business issue worth analyzing and use machine learning to provide further insights.  Our team chose a large dataset from Kaggle.com to ensure any machine learning application will have ample data to model.
 
 [Supermarket dataset for predictive marketing 2023](https://www.kaggle.com/datasets/hunter0007/ecommerce-dataset-for-predictive-marketing-2023/code)
+
+As people buy more and more online, including groceries and everyday use household items, grocers and supermarkets will want and need better understanding of the needs and habits of their online customers.  Identifying customer trends and grouping them based on shopping habits would help give marketing insight in suggesting future campaigns more curated to their specific trends.
 
 # Project Contributors:
 - Oluwatobi Adelaja
@@ -14,12 +16,11 @@ To find a potential business problem worth analyzing and use machine learning to
 - Peter Warren
 
 # Project Strategy:
-1. Our first consideration was to make sure we chose a dataset that was complete enough to ensure we would have enough content to gain meaningful insights from a machine learning module, many of which do best with large amounts of data. <br> 
+1. Our first consideration was to make sure we chose a dataset that was complete enough to ensure we would have enough content to gain meaningful insights from a machine learning model, many of which do best with large amounts of data. <br> 
 
     We first chose data from a Board Game API hoping to glean better understanding on the relation between game mechanics and user popularity, but after running into large swaths of incomplete data in that dataset leading to a small amount of usable information, we had to rethink our initial choice.  <br>
 
     We chose to proceed with a different source as linked above regarding shopping trends for a grocery e-commerce chain called Hunter's Groceries.  This dataset was clean enough and large enough for us to feel confident in moving forward.
-<br>
 
 2.  Our next step was to prepare and process the data we had to further ensure the viability.  We cleaned and inspected the data, eliminating NaN values and checking for duplicates. We then saved this large amount of data in a postgreSQL database that we created separately on our own devices.  To replicate this project, please carefully read the notes in the 'ecom_etl' notebook before running any other notebooks.
 
