@@ -24,7 +24,7 @@ As people buy more and more online, including groceries and everyday use househo
 
 2.  Our next step was to prepare and process the data we had to further ensure the viability.  We cleaned and inspected the data, eliminating NaN values and checking for duplicates. We then saved this large amount of data in a postgreSQL database that we created separately on our own devices.  To replicate this project, please carefully read the notes in the 'ecom_etl' notebook before running any other notebooks.
 
-![flowchart](flowchart.jpg)
+![flowchart](flowchart_a.jpg)
 
 3. After properly storing this database, we then accessed it for further inspection.  We chose to do an initial exploratory data analysis to visualize the data, looking for correlations and intiial insights into user trends, particularly the time of day they would place their orders.  
 
