@@ -1,7 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-DROP TABLE IF EXISTS "ecommerce_cb";
+﻿DROP TABLE IF EXISTS "ecommerce_cb";
 CREATE TABLE "ecommerce_cb" (
     "com_id" int  NOT NULL,
     "order_id" int   NOT NULL,
@@ -16,9 +13,7 @@ CREATE TABLE "ecommerce_cb" (
     "department_id" int   NOT NULL,
     "department" varchar (150)   NOT NULL,
     "product_name" varchar (150)   NOT NULL,
-    CONSTRAINT "pk_ecommerce_cb" PRIMARY KEY (
-        "order_id"
+    CONSTRAINT "com_id" PRIMARY KEY (
+        "com_id"
      )
 );
-
--- df = pd.read_sql_query('select * from "Stat_Table"',con=engine)
