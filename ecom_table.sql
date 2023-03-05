@@ -51,3 +51,12 @@ CREATE VIEW ecommerce_2 as
 select ecommerce_cb.*, product_categories.category from ecommerce_cb
 left outer join product_categories on ecommerce_cb.product_name = product_categories.product_name
 ;
+
+CREATE VIEW order_avg as
+select distinct pro2.order_id, ecb.user_id, pro2.pro_count
+from
+ecommerce_cb as ecb
+inner join
+(select count(product_id) as pro_count, order_id from ecommerce_cb group by order_id) pro2
+on ecb.order_id = pro2.order_id
+;
