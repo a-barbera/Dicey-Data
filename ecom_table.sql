@@ -60,3 +60,16 @@ inner join
 (select count(product_id) as pro_count, order_id from ecommerce_cb group by order_id) pro2
 on ecb.order_id = pro2.order_id
 ;
+
+CREATE VIEW avg_customer_ord as 
+select oc3.user_id, oc3.ordco, pc3.proco, round(pc3.proco/oc3.ordco,2) as ordersize
+from
+(select user_id, count(order_id) as ordco from order_avg group by user_id) oc3
+inner join
+(select user_id, sum(pro_count) as proco from order_avg group by user_id) pc3
+on oc3.user_id = pc3.user_id
+order by user_id;
+
+create view customer_summaries as 
+select ecb_summaries.*, avg_customer_ord.proco, avg_customer_ord.ordersize from ecb_summaries
+left outer join avg_customer_ord on ecb_summaries.user_id = avg_customer_ord.userid;
