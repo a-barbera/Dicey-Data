@@ -1,6 +1,16 @@
 # Unsupervised Learning for Predictive Modeling 
 This is the group repository for project 4, a machine learning project using a Kaggle dataset with shopping data from Hunter's E-Grocery.
 
+## CAVEATS:
+In order to review this project. The following steps need to be done in this order.
+<ol> 
+    <li>Create a datbase named "ecom" in postgres</li>
+    <li>in the "ecom" db run the "ecom_table.sql" found in the main branch of this repository.</li>
+    <ul>This will create several tables and views in the ecom db</ul>
+    <li>Add your pgAdmin username and password to the ecom_passwords.py file found in the main branch of this repository.</li>
+    <li>Now run the jupyter notebooks in the following order.</li>
+</ol>
+
 # Project Overview:
 Our goal was to find a potential business issue worth analyzing and use machine learning to provide further insights.  Our team chose a large dataset from Kaggle.com to ensure any machine learning application will have ample data to model.
 
@@ -26,7 +36,7 @@ As people buy more and more online, including groceries and everyday use househo
 
 ![flowchart](flowchart_a.jpg)
 
-3. After properly storing this database, we then accessed it for further inspection.  We chose to do an initial exploratory data analysis to visualize the data, looking for correlations and intiial insights into user trends, particularly the time of day they would place their orders.  
+3. After properly storing this database, we then accessed it for further inspection.  We chose to do an initial exploratory data analysis to visualize the data, looking for correlations and intiial insights into user trends, particularly the time of day they would place their orders. Several views were created from the initial table. These views were designed to aid in the use of our eventual machine learning models. Because of the size of the dataset, having SQL "do the work" of the data transformation was thought to be the best practice.  
 
 4.  Now that our data was clean, stored, and we felt we had a strong understanding of how we could best utilize it, we discussed a machine learning model.  We decided to use an unsupervised machine learning model called k-means clustering, as it can be particularly useful when there is no specific outcome variable one is trying to predict.  We chose to use it because we only have a set of features we wanted to use to find collections of customer observations that share similar characteristics.  To help further fine-tune our model, we also incorporated principal component analysis to further clarify our classifications, using that information to respec and hone our k-means clustering even further.
 
